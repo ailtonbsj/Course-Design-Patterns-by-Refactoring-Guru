@@ -1,0 +1,18 @@
+<p>New Category</p>
+<input type="text" placeholder="name of category" style="margin-right: 5px;" #input />
+<button class="btn" (click)="save(input.value)">save</button>
+<p>List All Categories</p>
+<table style="width: 100%;">
+    <thead>
+        <tr>
+            <th style="text-align: left;">Name</th>
+            <th style="width: 100px;">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let category of categories;">
+            <td>{{ category.name }}</td>
+            <td><button class="btn" (click)="remove(category.id)">Remove</button></td>
+        </tr>
+    </tbody>
+</table>

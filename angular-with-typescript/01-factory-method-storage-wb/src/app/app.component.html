@@ -1,0 +1,15 @@
+<div class="window" [style.width]="winSize">
+  <div class="title-bar">
+    <button aria-label="Close" class="close" (click)="close()"></button>
+    <h1 class="title">Factory Method - Storage Web Sample</h1>
+    <button aria-label="Resize" class="resize" (click)="resize()"></button>
+  </div>
+  <ul role="menu-bar">
+    <li role="menu-item" tabindex="0" aria-haspopup="false" routerLink="category">Category</li>
+    <li role="menu-item" tabindex="0" aria-haspopup="false" routerLink="product">Product</li>
+  </ul>
+
+  <div class="window-pane">
+    <router-outlet></router-outlet>
+  </div>
+</div>

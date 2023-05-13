@@ -1,0 +1,18 @@
+<p>List All Products</p>
+<table style="width: 100%;">
+    <thead>
+        <tr>
+            <th style="text-align: left;">Name</th>
+            <th style="width: 100px;">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products;">
+            <td>{{ product.name }}</td>
+            <td><button class="btn" (click)="remove(product.id)">Remove</button></td>
+        </tr>
+    </tbody>
+</table>
+<p>New Product</p>
+<input type="text" placeholder="name of product" style="margin-right: 5px;" #input />
+<button class="btn" (click)="save(input.value)">save</button>
