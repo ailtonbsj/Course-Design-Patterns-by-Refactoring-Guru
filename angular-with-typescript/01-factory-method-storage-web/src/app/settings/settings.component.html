@@ -1,0 +1,12 @@
+<form [formGroup]="form">
+    <div class="field-row">
+        <input id="offline" type="radio" formControlName="dbconf" value="offline">
+        <label for="offline">Offline Database (Indexed DB)</label>
+    </div>
+    <div class="field-row">
+        <input id="online" type="radio" formControlName="dbconf" value="online">
+        <label for="online">Online Database (RAM Memory)</label>
+    </div>
+</form>
+<br>
+<button class="btn" (click)="save()">Save</button>

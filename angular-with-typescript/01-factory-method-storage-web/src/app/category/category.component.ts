@@ -17,7 +17,7 @@ export class CategoryComponent {
   }
 
   listAll() {
-    this.service.listAll<Category>().subscribe({
+    this.service.listAll().subscribe({
       next: entities => this.categories = entities,
       error: e => console.log(e)
     });

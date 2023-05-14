@@ -9,5 +9,5 @@ source "$HOME/.sdkman/bin/sdkman-init.sh"
 sdk install springboot
 
 # Create projects
-spring init --build=maven --java-version=17 --dependencies=web,jpa,devtools --groupId=NAME_OF_MY_PKG NAME_OF_MY_PROJECT
+spring init --build=maven --java-version=17 --dependencies=web,devtools --groupId=NAME_OF_MY_PKG NAME_OF_MY_PROJECT
 ```

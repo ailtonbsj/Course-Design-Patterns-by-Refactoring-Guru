@@ -17,7 +17,7 @@ export class ProductComponent {
   }
 
   listAll() {
-    this.service.listAll<Product>().subscribe({
+    this.service.listAll().subscribe({
       next: entities => this.products = entities,
       error: e => console.log(e)
     });
