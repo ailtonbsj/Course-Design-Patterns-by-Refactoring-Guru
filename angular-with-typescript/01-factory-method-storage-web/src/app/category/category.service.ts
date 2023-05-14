@@ -5,12 +5,13 @@ import { Observable } from 'rxjs';
 import { Category } from './category.model';
 import { OnlineStorageService } from '../storage/online-storage.service';
 import { HttpClient } from '@angular/common/http';
+import { StorageService } from '../storage/storage.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CategoryService {
-  storage: OfflineStorageService;
+  storage: StorageService;
 
   constructor(private http: HttpClient) {
     const dbconf = localStorage.getItem('dbconf') || 'offline';

@@ -10,4 +10,7 @@ sdk install springboot
 
 # Create projects
 spring init --build=maven --java-version=17 --dependencies=web,devtools --groupId=NAME_OF_MY_PKG NAME_OF_MY_PROJECT
+
+# Run
+./mvnw spring-boot:run
 ```

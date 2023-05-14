@@ -22,6 +22,7 @@ ng g c settings --skip-tests
 # Create inteface model
 ng g i category/category --type model
 ng g i product/product --type model
+ng g i storage/webStorage
 
 # Create service
 ng g s category/category --skip-tests
@@ -34,7 +35,8 @@ npm install dexie
 ng g cl storage/offlineStorage --type service --skip-tests
 ng g cl storage/onlineStorage --type service --skip-tests
 ng g cl storage/db --skip-tests
-ng g cl storage/db --skip-tests
+ng g cl storage/indexedDB --skip-tests
+ng g cl storage/restAPI --skip-tests
 
 # Create enum
 ng generate e modules
