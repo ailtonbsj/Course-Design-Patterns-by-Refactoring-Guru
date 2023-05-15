@@ -1,6 +1,8 @@
 # Factory Method Sample with IndexedDB and Rest API
 
-For use online API it's need to run [the Spring API for test](../../spring-with-java/01-api-for-test/).
+For use Rest API it's need to run [the Spring API for test](../../spring-with-java/01-api-for-test/).
+
+![UML](UML.png)
 
 ## History of commands
 
