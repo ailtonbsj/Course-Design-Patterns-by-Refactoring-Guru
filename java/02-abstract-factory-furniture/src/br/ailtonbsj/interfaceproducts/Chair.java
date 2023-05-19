@@ -1,0 +1,6 @@
+package br.ailtonbsj.interfaceproducts;
+
+public interface Chair {
+	boolean hasLegs();
+	void sitOn();
+}
