@@ -10,10 +10,11 @@ class WebCheckBox(ICheckbox):
 
     def paint(self):
         print('''
-        let div{name} = document.createElement('div');
-        let ch{name} = document.createElement('input');
-        ch{name}.setAttribute('type', 'checkbox');
-        let lb{name} = document.createTextNode('label');
-        div{name}.appendChild(ch{name});
-        div{name}.appendChild(lb{name});
-        '''.format(name=self.name.capitalize()))
+let divCh{name} = document.createElement('div');
+let ch{name} = document.createElement('input');
+ch{name}.setAttribute('type', 'checkbox');
+let lbCh{name} = document.createTextNode('{label}');
+divCh{name}.appendChild(ch{name});
+divCh{name}.appendChild(lbCh{name});
+document.body.appendChild(divCh{name});
+'''.format(name=self.name, label=self.label))

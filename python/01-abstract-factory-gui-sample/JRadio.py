@@ -9,4 +9,4 @@ class JRadio(IRadio):
         self.label = label
 
     def paint(self):
-        print("JRadioButton " + self.name + " = new JRadioButton(\"" + self.label + "\");")
+        print("JRadioButton rd" + self.name + " = new JRadioButton(\"" + self.label + "\");")

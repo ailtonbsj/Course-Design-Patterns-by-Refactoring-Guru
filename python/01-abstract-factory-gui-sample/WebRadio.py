@@ -9,9 +9,12 @@ class WebRadio(IRadio):
         self.label = label
 
     def paint(self):
-        print("let div1 = document.createElement('div');")
-        print("let ch1 = document.createElement('input');")
-        print("ch1.setAttribute('type', 'radio');")
-        print("let lb1 = document.createTextNode('label');")
-        print("div1.appendChild(ch1);")
-        print("div1.appendChild(lb1);")
+                print('''
+let divRd{name} = document.createElement('div');
+let rd{name} = document.createElement('input');
+rd{name}.setAttribute('type', 'radio');
+let lbRd{name} = document.createTextNode('{label}');
+divRd{name}.appendChild(rd{name});
+divRd{name}.appendChild(lbRd{name});
+document.body.appendChild(divRd{name});
+'''.format(name=self.name, label=self.label))

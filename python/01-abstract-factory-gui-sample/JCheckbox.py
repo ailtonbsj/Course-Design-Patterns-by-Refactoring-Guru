@@ -9,4 +9,4 @@ class JCheckBox(ICheckbox):
         self.label = label
 
     def paint(self):
-        print("JCheckBox "+ self.name +" = new JCheckBox(\"" + self.label + "\");")
+        print("JCheckBox chb"+ self.name +" = new JCheckBox(\"" + self.label + "\");")
