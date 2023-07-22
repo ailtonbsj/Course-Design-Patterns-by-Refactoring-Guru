@@ -3,26 +3,20 @@ package br.ailtonbsj.designpattern;
 public class Client {
 
 	public static void main(String[] args) {
-		Director director = new Director();
-		
+		Director<Car> director = new Director<>();
 		CarBuilder builder = new CarBuilder();
 		
-		director.makeSportsCar(builder);
-		Car sport = builder.getResult();
+		Car sport = director.makeSportsCar(builder).getResult();
 		System.out.println(sport.toString());
-		
-		director.makeSUV(builder);
-		Car suv = builder.getResult();
+		Car suv = director.makeSUV(builder).getResult();
 		System.out.println(suv.toString());
 		
+		Director<Manual> directorManual = new Director<>();
 		CarManualBuilder manualBuilder = new CarManualBuilder();
 		
-		director.makeSportsCar(manualBuilder);
-		Manual manualSport = manualBuilder.getResult();
+		Manual manualSport = directorManual.makeSportsCar(manualBuilder).getResult();
 		System.out.println(manualSport.getText());
-		
-		director.makeSUV(manualBuilder);
-		Manual manualSUV = manualBuilder.getResult();
+		Manual manualSUV = directorManual.makeSUV(manualBuilder).getResult();
 		System.out.println(manualSUV.getText());
 	}
 

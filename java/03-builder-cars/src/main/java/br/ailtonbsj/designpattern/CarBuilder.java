@@ -1,26 +1,31 @@
 package br.ailtonbsj.designpattern;
 
-public class CarBuilder implements Builder {
+public class CarBuilder implements Builder<Car> {
 	Car car;
 
-	public void reset() {
+	public Builder<Car> reset() {
 		car = new Car();
+		return this;
 	}
 
-	public void setSeats(int number) {
+	public Builder<Car> setSeats(int number) {
 		car.setSeats(number);
+		return this;
 	}
 
-	public void setEngine(String engine) {
+	public Builder<Car> setEngine(String engine) {
 		car.setEngine(engine);
+		return this;
 	}
 
-	public void setTripComputer() {
+	public Builder<Car> setTripComputer() {
 		car.setTripComputer("Trip computer installed!");
+		return this;
 	}
 
-	public void setGPS() {
+	public Builder<Car> setGPS() {
 		car.setGps("GPS installed!");
+		return this;
 	}
 	
 	public Car getResult() {

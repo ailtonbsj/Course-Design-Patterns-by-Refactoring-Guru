@@ -1,17 +1,11 @@
 package br.ailtonbsj.designpattern;
 
-public class Director {
-	public void makeSUV(Builder builder) {
-		builder.reset();
-		builder.setSeats(4);
-		builder.setEngine("V8 Engine");
+public class Director<T> {
+	public Builder<T> makeSUV(Builder<T> builder) {
+		return builder.reset().setSeats(4).setEngine("V8 Engine");
 	}
-	
-	public void makeSportsCar(Builder builder) {
-		builder.reset();
-		builder.setSeats(2);
-		builder.setEngine("Sport Engine");
-		builder.setTripComputer();
-		builder.setGPS();
+
+	public Builder<T> makeSportsCar(Builder<T> builder) {
+		return builder.reset().setSeats(2).setEngine("Sport Engine").setTripComputer().setGPS();
 	}
 }
